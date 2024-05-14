@@ -1,0 +1,12 @@
+// UTILITIES 
+@import './utilities/colors';
+@import './utilities/mixins';
+
+// BASE 
+@import './base/reset';
+@import './base/global';
+
+// COMPONENTS 
+
+@import './components/header';
+@import './components/footer';
