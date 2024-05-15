@@ -1,0 +1,73 @@
+.header-top {
+  .container {
+    .wrapper {
+        li:hover ul {
+            display: block;
+        }
+      @include font(13px, 300, 42px);
+
+      @include flex($justify: space-between);
+      ul {
+        gap: 2em;
+        ul{
+            position: absolute;
+            left: -1em;
+            line-height: 2em;
+            background-color: $white-color;
+            border: 1px solid $border-color;
+            z-index: 1;
+            display: none;
+            li{
+                a{
+                    padding: 0.25em 1em;
+                }
+                &.current a {
+                    background-color: $border-color;
+                }
+            }
+        }
+      }
+      li {
+        position: relative;
+      }
+      .left {
+        .main-links {
+          a:hover {
+            color: $secondary-color;
+          }
+
+          @include flex();
+        }
+      }
+      .right {
+        .main-links {
+          a:hover {
+            color: $secondary-color;
+          }
+
+          @include flex();
+        }
+      }
+    }
+  }
+}
+.icon-small,
+.icon-large {
+  @include flex($align: center);
+  padding: 0 0.25em;
+  font-weight: normal;
+}
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
+.icon-large {
+  font-size: 1.25em;
+  padding: 0 0.75em 0 0;
+}
+
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+}

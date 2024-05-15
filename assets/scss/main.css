@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
 html,
 body,
 div,
@@ -109,4 +110,170 @@ del {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #0a021c;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+input::-moz-placeholder {
+  font: inherit;
+}
+
+input::placeholder {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+}
+
+h1 {
+  font-size: calc(1.3em + 1vw);
+  font-weight: 800;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.938em;
+}
+
+.column {
+  margin-left: 0 0.938em;
+  margin-right: 0 0.938em;
+}
+
+.column .row {
+  padding: 0 0.938em;
+}
+
+.header-top .container .wrapper {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.header-top .container .wrapper li:hover ul {
+  display: block;
+}
+.header-top .container .wrapper ul {
+  gap: 2em;
+}
+.header-top .container .wrapper ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2em;
+  background-color: #fff;
+  border: 1px solid #e5e8ec;
+  z-index: 1;
+  display: none;
+}
+.header-top .container .wrapper ul ul li a {
+  padding: 0.25em 1em;
+}
+.header-top .container .wrapper ul ul li.current a {
+  background-color: #e5e8ec;
+}
+.header-top .container .wrapper li {
+  position: relative;
+}
+.header-top .container .wrapper .left .main-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.header-top .container .wrapper .left .main-links a:hover {
+  color: #794afa;
+}
+.header-top .container .wrapper .right .main-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+.header-top .container .wrapper .right .main-links a:hover {
+  color: #794afa;
+}
+
+.icon-small,
+.icon-large {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 0.25em;
+  font-weight: normal;
+}
+
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
+
+.icon-large {
+  font-size: 1.25em;
+  padding: 0 0.75em 0 0;
+}
+
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
 }/*# sourceMappingURL=main.css.map */
