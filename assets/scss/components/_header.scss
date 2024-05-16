@@ -1,30 +1,30 @@
 .header-top {
   .container {
     .wrapper {
-        li:hover ul {
-            display: block;
-        }
+      li:hover ul {
+        display: block;
+      }
       @include font(13px, 300, 42px);
 
       @include flex($justify: space-between);
       ul {
         gap: 2em;
-        ul{
-            position: absolute;
-            left: -1em;
-            line-height: 2em;
-            background-color: $white-color;
-            border: 1px solid $border-color;
-            z-index: 1;
-            display: none;
-            li{
-                a{
-                    padding: 0.25em 1em;
-                }
-                &.current a {
-                    background-color: $border-color;
-                }
+        ul {
+          position: absolute;
+          left: -1em;
+          line-height: 2em;
+          background-color: $white-color;
+          border: 1px solid $border-color;
+          z-index: 1;
+          display: none;
+          li {
+            a {
+              padding: 0.25em 1em;
             }
+            &.current a {
+              background-color: $border-color;
+            }
+          }
         }
       }
       li {
@@ -65,9 +65,122 @@
   font-size: 1.25em;
   padding: 0 0.75em 0 0;
 }
+// .mobile-hide {
+//   display: none;
+// }
 
 header li > a {
-  display: flex;
+  @include flex($align:center);
   position: relative;
   line-height: inherit;
+  transition: 1s all ease;
+}
+
+// header-top
+
+.header-nav {
+  padding: 0.5em 0;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid $border-color;
+  .container {
+    .wrapper {
+      @include flex($justify: space-between);
+      & > a {
+        &.trigger {
+          font-size: 1.5rem;
+          display: flex;
+          padding: 0.25rem;
+          margin-right: 0.5em;
+        }
+        &.desktop-hide {
+          display: block;
+          @include tablet() {
+            display: none;
+          }
+        }
+      }
+      .left {
+        @include flex($align: center);
+        .logo {
+          a {
+            font-family: "Poppins";
+            font-size: 1.75rem;
+            position: relative;
+            font-weight: 800;
+            display: flex;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            .circle {
+              position: absolute;
+              top: -15px;
+              left: 0;
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background-color: $light-bg-color;
+              z-index: -1;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background-color: $secondary-color;
+                bottom: 5px;
+                right: 5px;
+                opacity: 0.4;
+              }
+            }
+          }
+        }
+        .mobile-hide {
+          display: none;
+          @include tablet(){
+            display: block;
+          }
+          .second-links {
+            @include flex($align: center);
+            
+            .fly-item {
+              position: absolute;
+              height: 16px;
+              font-size: $fnt-smaller;
+              padding: 3px;
+              text-align: center;
+              line-height: 10px;
+              color: $white-color;
+              top: 50%;
+              margin-top: -24px;
+              width: 30px;
+              border-radius: 3px;
+              right: -32px;
+              background-color: $primiry-color;
+            }
+          }
+        }
+      }
+      .right {
+        .second-links {
+          @include flex($align: center);
+          position: relative;
+          margin-left: auto;
+          // .mobile-hide {
+          //   // @include tablet() {
+          //   //   display: block;
+          //   // }
+          // }
+          .icon-large {
+            position: relative;
+          }
+          .fly-item {
+            top: 0;
+            right: 16px;
+            width: 16px;
+            background-color: $secondary-dark-color;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
 }
