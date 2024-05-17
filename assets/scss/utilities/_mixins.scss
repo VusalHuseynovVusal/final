@@ -1,14 +1,14 @@
-@mixin tablet($minWidth: 990px) {
-  @media only screen and (min-width: $minWidth) {
+@mixin tablet($maxWidth: 990px) {
+  @media only screen and (max-width: $maxWidth) {
     @content;
   }
 }
-@mixin mobile($minWidth: 768px) {
-  @media only screen and (min-width: $minWidth) {
+@mixin mobile($maxWidth: 768px) {
+  @media only screen and (max-width: $maxWidth) {
     @content;
   }
 }
-@mixin flex($direction: row, $justify: flex-start, $align: center, $wrap: nowrap) {
+@mixin flex($direction:row, $justify: flex-start, $align: center, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;

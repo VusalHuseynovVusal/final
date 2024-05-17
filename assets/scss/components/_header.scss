@@ -1,4 +1,9 @@
 .header-top {
+  &.mobile-hide {
+    @include tablet() {
+      display: none;
+    }
+  }
   .container {
     .wrapper {
       li:hover ul {
@@ -56,6 +61,7 @@
   @include flex($align: center);
   padding: 0 0.25em;
   font-weight: normal;
+  position: relative;
 }
 .icon-small {
   font-size: 1.25em;
@@ -65,12 +71,12 @@
   font-size: 1.25em;
   padding: 0 0.75em 0 0;
 }
-// .mobile-hide {
-//   display: none;
-// }
+.mobile-hide {
+  display: block;
+}
 
 header li > a {
-  @include flex($align:center);
+  @include flex();
   position: relative;
   line-height: inherit;
   transition: 1s all ease;
@@ -79,12 +85,16 @@ header li > a {
 // header-top
 
 .header-nav {
+  nav > ul {
+    line-height: 100px;
+    gap: 2em;
+  }
   padding: 0.5em 0;
   margin-bottom: 1.5em;
   border-bottom: 1px solid $border-color;
   .container {
     .wrapper {
-      @include flex($justify: space-between);
+      @include flex();
       & > a {
         &.trigger {
           font-size: 1.5rem;
@@ -93,14 +103,14 @@ header li > a {
           margin-right: 0.5em;
         }
         &.desktop-hide {
-          display: block;
+          display: none;
           @include tablet() {
-            display: none;
+            display: block;
           }
         }
       }
       .left {
-        @include flex($align: center);
+        @include flex();
         .logo {
           a {
             font-family: "Poppins";
@@ -134,13 +144,30 @@ header li > a {
           }
         }
         .mobile-hide {
-          display: none;
-          @include tablet(){
-            display: block;
+          display: block;
+          @include tablet() {
+            display: none;
           }
           .second-links {
             @include flex($align: center);
-            
+            & li a .mega {
+              .container {
+                .wrapper{
+                  @include font(13px, 300, 42px);
+                 @include flex($direction:column, $justify: flex-start, $align: center, $wrap: nowrap);
+
+                  .flexcol {
+                    gap: 1em;
+                    flex: 1;
+                    min-width: 180px;
+                    padding-right: 2.5rem;
+                    margin-bottom: 1.5rem;
+                    z-index: 1;
+                  }
+                }
+              }
+            }
+
             .fly-item {
               position: absolute;
               height: 16px;
@@ -160,24 +187,37 @@ header li > a {
         }
       }
       .right {
+        margin-left: auto;
+        position: relative;
+        li > a {
+          margin-left: 1em;
+        }
         .second-links {
           @include flex($align: center);
           position: relative;
           margin-left: auto;
-          // .mobile-hide {
-          //   // @include tablet() {
-          //   //   display: block;
-          //   // }
-          // }
+          .mobile-hide {
+            @include tablet() {
+              display: none;
+            }
+          }
           .icon-large {
             position: relative;
           }
+
           .fly-item {
-            top: 0;
-            right: 16px;
+            @include flex($justify: center);
+            position: absolute;
             width: 16px;
+            height: 16px;
             background-color: $secondary-dark-color;
             border-radius: 50%;
+            top: -10px;
+            right: 3px;
+            span {
+              color: $border-color;
+              font-size: 15px;
+            }
           }
         }
       }
