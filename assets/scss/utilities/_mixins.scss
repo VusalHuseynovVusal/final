@@ -1,10 +1,10 @@
-@mixin tablet($maxWidth: 990px) {
-  @media only screen and (max-width: $maxWidth) {
+@mixin tablet($minWidth: 990px) {
+  @media only screen and (min-width: $minWidth) {
     @content;
   }
 }
 @mixin mobile($maxWidth: 768px) {
-  @media only screen and (max-width: $maxWidth) {
+  @media only screen and (min-width: $minWidth) {
     @content;
   }
 }
