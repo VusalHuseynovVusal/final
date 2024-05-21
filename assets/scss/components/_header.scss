@@ -2,7 +2,6 @@
 
 .header-top {
   &.mobile-hide {
-
     @include tablet() {
       display: block;
     }
@@ -60,7 +59,6 @@
   }
 }
 
-
 header li > a {
   @include flex();
   position: relative;
@@ -71,7 +69,7 @@ header li > a {
 // HEADER NAV
 
 .header-nav {
-  @include tablet(){
+  @include tablet() {
     padding: 0;
     margin: 0;
     border-bottom: 0;
@@ -110,7 +108,7 @@ header li > a {
             display: flex;
             padding-left: 0.75rem;
             margin-right: 2rem;
-            @include tablet(){
+            @include tablet() {
               margin-right: 2em;
             }
             .circle {
@@ -174,7 +172,7 @@ header li > a {
             .has-child {
               @include flex();
               &:hover {
-                .mega{
+                .mega {
                   display: block;
                 }
               }
@@ -240,11 +238,14 @@ header li > a {
       .right {
         margin-left: auto;
         position: relative;
+        @include tablet() {
+          max-width: 600px;
+          margin-left: auto;
+        }
         li > a {
           margin-left: 1em;
           @include tablet() {
-          margin-left: 1em;
-
+            margin-left: 1em;
           }
         }
         .second-links {
@@ -283,36 +284,36 @@ header li > a {
 // NAV MEGA MENU
 
 nav .mega {
-
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
- 
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: 0;
   left: 0;
   right: 0;
   line-height: 2em;
   background-color: $light-bg-color;
   z-index: 100;
   @include tablet() {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
     position: absolute;
     width: 100%;
     height: auto;
-    top: auto;
+    top: 100%;
     left: 0;
     right: 0;
-    padding: 2.5rem;
+    // padding: 2.5rem;
     line-height: 2em;
     background-color: $light-bg-color;
     box-shadow: rgb(0 0 0/20%) 0 30px 20px -30px;
     z-index: 100;
-    display: none;
-
+    // display: none;
   }
 
   .view-all {
+    @include tablet() {
+      margin-top: 1em;
+    }
     &:hover {
       color: #477d2a;
     }
@@ -335,10 +336,9 @@ nav .mega {
     .wrapper {
       @include font(13px, 400, 42px);
       // @include flex($align: start);
-      @include tablet () {
+      @include tablet() {
         display: flex;
       }
-
 
       .flexcol {
         gap: 1em;
@@ -348,34 +348,44 @@ nav .mega {
         margin-bottom: 1.5rem;
         z-index: 1;
         &.products {
-          flex: 2;
-          padding: 0;
-          align-items: center;
-          position: relative;
+          @include tablet() {
+            flex: 2;
+            padding: 0;
+            align-items: center;
+            position: relative;
+          }
+
           .text-content {
-            line-height: initial;
-            @include flex($direction: column);
-            gap: 0.5em;
-            margin-top: 0.5em;
-            position: absolute;
-            bottom: 4em;
-            width: 100%;
+            @include tablet() {
+              line-height: initial;
+              @include flex($direction: column);
+              gap: 0.5em;
+              margin-top: 0.5em;
+              position: absolute;
+              bottom: 4em;
+              width: 100%;
+            }
             h4 {
-              font-size: 2em;
-              font-weight: 800;
-              text-align: center;
-              color: $secondary-dark-color;
+              font-size: 0.8em;
+              text-transform: uppercase;
+
               @include tablet() {
-                font-size: 0.8em;
-                text-transform: uppercase;
+                font-size: 2em;
+                font-weight: 800;
+                text-align: center;
+                color: $secondary-dark-color;
               }
             }
           }
           .media {
-            height: 400px;
+            @include tablet() {
+              height: 400px;
+            }
           }
           .row {
-            width: 100%;
+            @include tablet() {
+              width: 100%;
+            }
           }
         }
       }
@@ -438,7 +448,7 @@ nav .mega {
           font-size: 0.9em;
           font-weight: 300;
         }
-        & :where(span,button) {
+        & :where(span, button) {
           position: absolute;
           top: 0;
           padding: 0.55em 1.5em;
@@ -461,6 +471,137 @@ nav .mega {
             background-color: $dark-color;
           }
         }
+      }
+    }
+  }
+}
+
+
+// DEPARTMENT MENU
+
+.dpt-cat {
+  position: relative;
+  z-index: 10;
+
+  .dpt-head {
+    position: relative;
+    width: 300px;
+    padding: 0.75em 1.5em;
+    background-color: $primiry-color;
+    border-radius: 7px 7px 0 0;
+    color: $white-color;
+    margin-bottom: -2.15em;
+    .dpt-trigger {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1.3em;
+      height: 60px;
+      width: 60px;
+    }
+    .mini-text {
+      color: $light-bg-color;
+    }
+  }
+  .dpt-menu {
+    @include tablet() {
+      position: absolute;
+      top: 100%;
+      width: 300px;
+      background-color: $white-color;
+      border: 1px solid $border-color;
+      border-top: 0;
+      border-bottom: 0;
+    }
+    & > ul > li > a {
+      font-size: $fnt-small;
+      height: 46px;
+      align-items: center;
+      @include tablet() {
+        font-weight: 500;
+        padding: 0 1.5em;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+    .second-links {
+      transition: 0.3s all ease-in-out;
+      li {
+        &:hover {
+          & > a {
+            color: #477d2a;
+          }
+        }
+      }
+      .has-child {
+        // first sub menu
+        li a:hover{
+          text-decoration: underline;
+        }
+        & > ul {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: auto;
+          min-height: 100%;
+          padding: 1.5em;
+          font-size: $fnt-small;
+          line-height: 2.5em;
+          border: 1px solid $border-color;
+          display: none;
+          background-position: right bottom;
+          background-repeat: no-repeat;
+          background-size: auto;
+        }
+      }
+
+      .beauty:hover {
+        & > ul {
+          display: block;
+          background-image: url(../../../assets/menu/menu_bg1.jpg);
+        }
+      }
+
+      .electronic:hover {
+        & > ul {
+          display: block;
+          background-image: url(../../../assets/menu/menu_bg2.jpg);
+        }
+      }
+
+      .fashion:hover {
+        & > ul {
+          display: block;
+          background-image: url(../../../assets/menu/menu_bg3.jpg);
+        }
+      }
+
+      .homekit:hover {
+        & > ul {
+          display: block;
+          background-image: url(../../../assets/menu/menu_bg4.jpg);
+          .mega {
+            display: block;
+          }
+        }
+      }
+
+      .mega {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        padding: 1.5em;
+        font-size: $fnt-small;
+        line-height: 2.5em;
+        border: 1px solid $border-color;
+        border-top: 0;
+        display: none;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto;
       }
     }
   }
