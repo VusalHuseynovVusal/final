@@ -1,6 +1,13 @@
 // HEADER TOP
 
 .header-top {
+  li {
+    &:hover {
+      & ul {
+        display: block;
+      }
+    }
+  }
   &.mobile-hide {
     @include tablet() {
       display: block;
@@ -59,11 +66,11 @@
   }
 }
 
-header li > a {
+:where(.off-canvas, header) li > a {
   @include flex();
   position: relative;
   line-height: inherit;
-  transition: 1s all ease;
+  transition: .3s all ease;
 }
 
 // HEADER NAV
@@ -135,6 +142,7 @@ header li > a {
           }
         }
         .mobile-hide {
+          // display: none;
           @include tablet() {
             display: block;
           }
@@ -254,7 +262,7 @@ header li > a {
           margin-left: auto;
           .mobile-hide {
             @include tablet() {
-              display: none;
+              display: block;
             }
           }
           .icon-large {
@@ -284,6 +292,12 @@ header li > a {
 // NAV MEGA MENU
 
 nav .mega {
+  @include tablet() {
+    nav .mega {
+      display: block;
+    }
+  }
+  // display: none;
   position: absolute;
   width: 100%;
   top: 0;
@@ -396,6 +410,9 @@ nav .mega {
 // HEADER MAIN
 
 .header-main {
+  @include tablet() {
+    display: block;
+  }
   background-color: $secondary-dark-color;
   padding: 1.5em 0;
   margin-bottom: 2em;
@@ -534,7 +551,7 @@ nav .mega {
       }
       .has-child {
         // first sub menu
-        li a:hover{
+        li a:hover {
           text-decoration: underline;
         }
         & > ul {
@@ -575,13 +592,17 @@ nav .mega {
           background-image: url(../../../assets/menu/menu_bg3.jpg);
         }
       }
-
+      // .homekit .mega {
+      //   @include flex();
+      // }
       .homekit:hover {
-        & > ul {
-          display: block;
+        & > .mega {
+          display: flex;
+          padding: 0.75em 1em;
+          width: max-content;
           background-image: url(../../../assets/menu/menu_bg4.jpg);
-          .mega {
-            display: block;
+          & .row {
+            padding: 0 0.725em;
           }
         }
       }
@@ -606,3 +627,7 @@ nav .mega {
     }
   }
 }
+
+
+
+

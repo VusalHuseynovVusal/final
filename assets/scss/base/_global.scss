@@ -161,11 +161,9 @@ h4 {
 
 
 
-@include tablet(){
 .mobile-hide {
-  display: block;
-}
-.desktop-hide {
   display: none;
 }
+.desktop-hide {
+  display: block;
 }
