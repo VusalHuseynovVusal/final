@@ -3,7 +3,12 @@
     @content;
   }
 }
-@mixin mobile($maxWidth: 768px) {
+@mixin mobile($minWidth: 768px) {
+  @media only screen and (min-width: $minWidth) {
+    @content;
+  }
+}
+@mixin mini($minWidth: 461px) {
   @media only screen and (min-width: $minWidth) {
     @content;
   }
@@ -19,4 +24,11 @@
   font-size: $fontSize;
   font-weight: $fontWeight;
   line-height: $lineHeight;
+}
+@mixin bojective-cover() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
 }
