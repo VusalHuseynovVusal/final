@@ -58,7 +58,7 @@
 
                 & :where(h2, h3) span:first-child {
                   font-weight: 300;
-                  columns: $light-text-color;
+                  color: $light-text-color;
                 }
                 & :where(h2, h3) span:last-child {
                   color: $secondary-dark-color;
@@ -381,6 +381,9 @@
               }
             }
           }
+          .product .item:nth-child(3) .rating .stars {
+            width: 64px;
+          }
           .products:where(.mini, .main) h3 {
             font-weight: 400;
           }
@@ -406,7 +409,7 @@
           .products .hoverable li:last-child {
             transition-delay: 0.1s;
           }
-          .products:where(.big, .main.one) .content {
+          .products:where(.big, .main, .one) .content {
             gap: 1em;
             margin-top: 1.25em;
           }
@@ -460,26 +463,42 @@
         .products {
           &.main {
             @include flex($align: start, $wrap: wrap);
-
+            & :where(.image, .thumbnail) {
+              &:hover {
+                img {
+                  transform: scale(1.1);
+                }
+              }
+              img {
+                transition: 0.3s all;
+              }
+            }
             .item {
+              position: relative;
+              display: flex;
               @include mini() {
                 flex: 0 0 50%;
               }
               @include tablet() {
                 flex: 0 0 33.3333%;
               }
+              // max-width: 460px;
               flex-direction: column;
               flex: 0 0 100%;
-              padding: 0 0.938;
+              padding: 0 0.938em;
               padding-bottom: 2em;
               .media {
                 height: 390px;
                 .thumbnail {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  display: block;
-                  position: absolute;
+                  a {
+                    img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                      position: absolute;
+                    }
+                  }
                 }
                 .hoverable {
                   position: absolute;
@@ -532,11 +551,13 @@
                 }
               }
               .content {
+                gap: 1em;
                 h3 {
                   font-family: "Rubik";
                   font-size: 1em;
                   overflow: hidden;
                   text-overflow: ellipsis;
+                  font-weight: 700;
                   a {
                     &:hover {
                       text-decoration: underline;
@@ -560,20 +581,53 @@
                     text-decoration: line-through;
                   }
                 }
+                .footer {
+                  position: absolute;
+                  left: 13px;
+                  right: 13px;
+                  padding: 0 1em 1mm;
+                  border-radius: 7px;
+                  background-color: #f4f4f6;
+                  z-index: 100;
+                  opacity: 0;
+                  visibility: hidden;
+                  will-change: opacity;
+                  transition: 0.2s all ease-in-out;
+                  ul {
+                    list-style: disc;
+                    padding: 1.25em 0 0 1.25em;
+                    line-height: 1.8;
+                    border-top: 1px solid $border-color;
+                    margin-top: 145px;
+                  }
+                }
+                .rating {
+                  @include flex();
+                  gap: 0.5em;
+                  margin-top: 1.25em;
+                  .stars {
+                    width: 80px;
+                    height: 16px;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='rgba(240,187,64,1)'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z'%3E%3C/path%3E%3C/svg%3E");
+                    background-position-y: top;
+                    // background-repeat-x: no-repeat;
+                  }
+                }
               }
             }
           }
-          .rating {
-            @include flex();
-            gap: 0.5em;
-            .stars {
-              width: 80px;
-              height: 16px;
-              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='rgba(240,187,64,1)'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z'%3E%3C/path%3E%3C/svg%3E");
-              background-position-y: top;
-              // background-repeat-x: no-repeat;
-            }
+        }
+        .products .item:hover {
+          & .content > *:not(.footer) {
+            z-index: 103;
           }
+          & .content .footer {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        .products .item:nth-child(3) .stars {
+          width: 64px;
         }
         .products:where(.mini, .main) h3 {
           font-weight: 400;
@@ -604,6 +658,82 @@
           gap: 1em;
           margin-top: 1.25em;
         }
+        .product-mini {
+          flex: 0 0 25%;
+        }
+      }
+    }
+  }
+}
+
+//  BANNER SECTION
+
+.banners {
+  .container {
+    .wrapper {
+      .column {
+        .banner {
+          @include flex($wrap: wrap, $align: start);
+
+          .row {
+            @include tablet() {
+              flex: 0 0 50%;
+            }
+            .item {
+              
+              position: relative;
+              background-color: $white-color;
+              border: 1px solid $border-color;
+              .image {
+                text-align: right;
+                 
+                &.get-gray {
+                  background-color: $border-color;
+                }
+              }
+              .text-content {
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 30%;
+                  left: 0;
+                  width: 250px;
+                  height: auto;
+                  background-color: #fff;
+                  z-index: 1;
+                  filter: blur(50px);
+                  opacity: 0.8;
+                }
+                @include flex($direction: column, $align: start);
+                gap: 1em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 1.5em 2.5em;
+                h3 {
+                  font-size: calc(1em + 0.5vw);
+                  font-weight: 300;
+                  span {
+                    font-size: 80%;
+                  }
+                }
+                .primary-button {
+                  z-index: 3;
+                }
+              }
+              .over-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        
       }
     }
   }
