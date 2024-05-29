@@ -70,8 +70,17 @@
   @include flex();
   position: relative;
   line-height: inherit;
-  transition: .3s all ease;
+  transition: 0.3s all ease;
 }
+
+
+// PAGE-SINGLE 
+// department menu 
+.page-home .dpt-cat .dpt-trigger {
+  display: none;
+}
+
+
 
 // HEADER NAV
 
@@ -407,7 +416,15 @@ nav .mega {
   }
 }
 
+
+
+
+
+
 // HEADER MAIN
+
+
+
 
 .header-main {
   @include tablet() {
@@ -432,9 +449,17 @@ nav .mega {
           margin-bottom: -3.35em;
           .mini-text {
             color: $light-bg-color;
+            &:nth-child(2) {
+              @include tablet(){
+                display: block;
+              }
+            }
           }
         }
         .dpt-trigger {
+          @include tablet(){
+            display: block;
+          }
           position: absolute;
           right: 0;
           top: 0;
@@ -492,7 +517,6 @@ nav .mega {
     }
   }
 }
-
 
 // DEPARTMENT MENU
 
@@ -627,7 +651,3 @@ nav .mega {
     }
   }
 }
-
-
-
-

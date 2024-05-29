@@ -1,0 +1,337 @@
+// NEWSLETTER
+
+.newsletter {
+  padding: 2.5em 0;
+  background-color: $dark-color;
+  color: $white-color;
+  .container {
+    .wrapper {
+      .box {
+        @include flex($justify: space-between);
+        .content {
+          h3 {
+            font-size: 1.5em;
+          }
+          p {
+            font-weight: 300;
+            color: $border-color;
+            margin: 0.5em 0 1.5em;
+            strong {
+              color: $primiry-color;
+            }
+          }
+        }
+        form {
+          max-width: 500px;
+          width: 100%;
+
+          position: relative;
+          &.search {
+            input {
+              line-height: 3.25em;
+              padding: 0.7em 4.5em;
+              border: 0;
+              outline: 0;
+              width: 100%;
+              border-radius: 7px;
+              font-size: 0.9em;
+              font-weight: 300;
+            }
+            & :where(span, button) {
+              position: absolute;
+              top: 0;
+              padding: 0.55em 1.5em;
+              font-size: 1em;
+              color: $light-text-color;
+              height: 100%;
+            }
+            button {
+              right: 0;
+              border: 0;
+              outline: 0;
+              font-size: 0.875em;
+              font-weight: 600;
+              background-color: $primiry-color;
+              color: $white-color;
+              border-radius: 0 7px 7px 0;
+              cursor: pointer;
+              transition: 0.3s all ease-in-out;
+              &:hover {
+                background-color: $dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// WIDGETS
+
+.widgets {
+  padding: 3.5em 2.5em;
+  background-color: $light-bg-color;
+  .container {
+    .wrapper {
+      .flexwrap {
+        @include flex($wrap: wrap, $align: start);
+        .row {
+          @include mobile() {
+            flex: 0 0 50%;
+          }
+          @include tablet() {
+            flex: 0 0 25%;
+          }
+          .mini-links {
+            ul {
+              &.flexcol {
+                @include flex($direction: column, $align: start);
+              }
+              font-size: $fnt-small;
+              color: $light-text-color;
+              margin-top: 1em;
+              li {
+                padding: 0.538em 0;
+                a:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// FOOTER-INFO
+
+.footer-info {
+  padding: 3.5em 2.5em;
+
+  .container {
+    .wrapper {
+      .mini-text {
+        margin-top: 2em;
+        text-align: center;
+      }
+      .flexcol {
+        @include flex($direction: column);
+        gap: 0;
+        .logo {
+          a {
+            font-family: "Poppins";
+            font-size: 1.75rem;
+            position: relative;
+            font-weight: 800;
+            display: flex;
+            padding-left: 0.75rem;
+            margin: 0 0 1em -0.75em;
+            @include tablet() {
+              margin-right: 2em;
+            }
+            .circle {
+              position: absolute;
+              top: -15px;
+              left: 0;
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background-color: $light-bg-color;
+              z-index: -1;
+              &::before {
+                content: "";
+                position: absolute;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background-color: $secondary-color;
+                bottom: 5px;
+                right: 5px;
+                opacity: 0.4;
+              }
+            }
+          }
+        }
+        .socials {
+          ul li a {
+            @include flex($justify: center);
+            font-size: 1.25em;
+            width: 40px;
+            height: 40px;
+            background-color: $light-bg-color;
+            border-radius: 50%;
+            margin: 0.25em;
+            transition: 0.3s all ease-in-out;
+            &:hover {
+              background-color: $border-color;
+            }
+          }
+          .flexitem {
+            @include flex($justify: center);
+          }
+        }
+      }
+    }
+  }
+}
+
+// <!-- MENU-BUTTON  -->
+.menu-button {
+  @include tablet() {
+    display: none;
+  }
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: $white-color;
+  box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+  z-index: 900;
+  .container {
+    .wrapper {
+      nav {
+        .flexitem {
+          @include flex($justify: center);
+          li {
+            flex: 1;
+            a {
+              display: inline-block;
+              position: relative;
+              @include flex($direction: column);
+              padding: 0.5em 0;
+              color: $light-text-color;
+              transition: 0.3s all ease-in-out;
+              &:hover {
+                color: $dark-color;
+                span {
+                  font-size: $fnt-small;
+                }
+                i {
+                  font-size: 1.25em;
+                }
+              }
+              & .fly-item {
+                position: absolute;
+                @include flex($justify: center);
+                top: 0;
+                right: 50%;
+                width: 16px;
+                border-radius: 50%;
+                margin-right: -20px;
+                background-color: $secondary-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// <!-- Search-BUTTON  -->
+
+.search-button {
+  @include tablet(){
+      display: none;
+  }
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  padding: 2.5em 0;
+  background-color: $secondary-dark-color;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  will-change: visibility, opacity;
+
+  .container {
+    .wrapper {
+      form {
+        &.search {
+          width: 100%;
+          position: relative;
+          input {
+            line-height: 3.25em;
+            padding: 0.7em 4.5em;
+            border: 0;
+            outline: 0;
+            width: 100%;
+            border-radius: 7px;
+            font-size: 0.9em;
+            font-weight: 300;
+          }
+          & :where(span, button) {
+            position: absolute;
+            top: 0;
+            padding: 0.55em 1.5em;
+            font-size: 1em;
+            color: $light-text-color;
+            height: 100%;
+          }
+          button {
+            right: 0;
+            border: 0;
+            outline: 0;
+            font-size: 0.875em;
+            font-weight: 600;
+            background-color: $primiry-color;
+            color: $white-color;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+            transition: 0.3s all ease-in-out;
+            &:hover {
+              background-color: $dark-color;
+            }
+          }
+        }
+        .t-close {
+          @include flex($justify: center);
+          font-size: 1.25em;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: $secondary-dark-color;
+          color: $white-color;
+          transition: 0.3s all ease-in-out;
+          //   &:hover {
+          //     background-color: $white-color;
+          //     color: $secondary-dark-color;
+          //     opacity: 0.75;
+          //   }
+          //   @include flex();
+          position: absolute;
+          top: -54px;
+          right: 0;
+          &:hover {
+            background-color: $primiry-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// OVERLAY 
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  
+}
+
+.showmenu .overlay {
+  visibility: visible;
+  opacity: 1;
+}

@@ -666,27 +666,28 @@
   }
 }
 
-//  BANNER SECTION
+//  BANNERS SECTION
 
 .banners {
   .container {
     .wrapper {
       .column {
+        // BANNER
+
         .banner {
           @include flex($wrap: wrap, $align: start);
-
+          margin-top: 2em;
           .row {
             @include tablet() {
               flex: 0 0 50%;
             }
             .item {
-              
               position: relative;
               background-color: $white-color;
               border: 1px solid $border-color;
               .image {
                 text-align: right;
-                 
+
                 &.get-gray {
                   background-color: $border-color;
                 }
@@ -733,7 +734,47 @@
             }
           }
         }
-        
+
+        // PRODUCT CATEGORIES
+        .product-catagories {
+          margin: 1.8em 0;
+          @include flex($align: start, $wrap: wrap);
+          .row {
+            //  flex: 0 0 33.3333%;
+            @include mobile() {
+              flex: 0 0 50%;
+            }
+            @include tablet() {
+              flex: 0 0 33.3333%;
+            }
+            flex: 0 0 100%;
+            .item {
+              display: flex;
+              flex-wrap: wrap;
+              padding: 1.5em;
+              border: 1px solid $border-color;
+              .image {
+                max-width: 150px;
+              }
+              .mini-links {
+                ul {
+                  font-size: $fnt-small;
+                  color: $light-text-color;
+                  margin-top: 1em;
+                  li {
+                    padding: 0.538em 0;
+                    a:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+              .second-links {
+                margin-top: 2em;
+              }
+            }
+          }
+        }
       }
     }
   }
