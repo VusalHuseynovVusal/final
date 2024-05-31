@@ -52,14 +52,50 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// show search
+const searchButton = document.querySelector(".t-search"),
+  tClose = document.querySelector(".search-close"),
+  showClass = document.querySelector(".site");
+searchButton.addEventListener("click", function () {
+  showClass.classList.toggle("showsearch");
+});
+tClose.addEventListener("click", function () {
+  showClass.classList.remove("showsearch");
+});
 
-// show search 
-const searchButton = document.querySelector('.t-search'),
-      tClose = document.querySelector('.search-close'),
-      showClass = document.querySelector('.site');
-searchButton.addEventListener('click', function(){
-  showClass.classList.toggle('showsearch');
-})
-tClose.addEventListener('click', function(){
-  showClass.classList.remove('showsearch');
-})
+// show dpt-menu
+const dptButton = document.querySelector(".dpt-cat .dpt-trigger");
+const dptClass = document.querySelector(".site");
+dptButton.addEventListener("click", function () {
+  dptClass.classList.toggle("showdpt");
+});
+
+var productThumb = new Swiper(".mySwiper", {
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var productBig = new Swiper(".mySwiper2", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: productThumb,
+  },
+});
+
+// stock products bar width persentage
+var stocks = document.querySelectorAll(".products .stock");
+for (let x = 0; x < stocks.length; x++) {
+  let stock = stocks[x].dataset.stock,
+    available = stocks[x].querySelector(".qty-available").innerHTML,
+    sold = stocks[x].querySelector(".qty-sold").innerHTML,
+    percent = (sold * 100) / stock;
+
+  stocks[x].querySelector(".available").style.width = percent + "%";
+}

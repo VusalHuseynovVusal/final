@@ -74,11 +74,6 @@
 }
 
 
-// PAGE-SINGLE 
-// department menu 
-.page-home .dpt-cat .dpt-trigger {
-  display: none;
-}
 
 
 
@@ -553,6 +548,7 @@ nav .mega {
       border: 1px solid $border-color;
       border-top: 0;
       border-bottom: 0;
+      z-index: 1000;
     }
     & > ul > li > a {
       font-size: $fnt-small;

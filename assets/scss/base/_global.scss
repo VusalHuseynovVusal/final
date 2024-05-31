@@ -105,13 +105,12 @@ img {
   color: $light-text-color;
 }
 
-
-strong{
-    font-weight: 800;
+strong {
+  font-weight: 800;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 input::placeholder {
   font: inherit;
@@ -143,7 +142,7 @@ h4 {
 // REUSABLE   SELECTOR
 
 .container {
-  @include tablet(){
+  @include tablet() {
     padding: 0 2em;
   }
   max-width: 1280px;
@@ -159,8 +158,6 @@ h4 {
   padding: 0 0.938em;
 }
 
-
-
 .mobile-hide {
   display: none;
 }
@@ -168,8 +165,117 @@ h4 {
   display: block;
 }
 
+// circle
+.circle {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: $light-bg-color;
+  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    bottom: 5px;
+    right: 5px;
+    opacity: 0.4;
+  }
+}
+
+// price
+.price {
+  .current {
+    font-size: calc(1em + 1vw);
+    color: $primiry-color;
+    margin-right: 0.25em;
+    @include mobile() {
+      .current {
+        font-size: 1.25em;
+      }
+    }
+  }
+  .normal {
+    color: $light-text-color;
+    text-decoration: line-through;
+  }
+}
+
+// sticky
+.is_sticky {
+  @include tablet() {
+    position: sticky;
+    top: 2em;
+  }
+}
+
+// stars
+.rating {
+  @include flex();
+  gap: 0.5em;
+  .stars {
+    width: 80px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='rgba(240,187,64,1)'%3E%3Cpath d='M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z'%3E%3C/path%3E%3C/svg%3E");
+    background-position-y: top;
+    // background-repeat-x: no-repeat;
+  }
+}
+
 //search button
 .showsearch .search-button {
   visibility: inherit;
   opacity: 1;
+}
+
+// offer 
+.offer {
+  text-align: center;
+  margin-bottom: 1.5em;
+  p {
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  .flexcenter {
+    @include flex($justify: center);
+    gap: 1em;
+    li {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      padding: 0.5em;
+      line-height: initial;
+      color: $secondary-dark-color;
+      background-color: $light-bg-color;
+      border-radius: 5px;
+      &:not(:last-child)::before {
+        content: ":";
+        position: absolute;
+        right: -0.6em;
+        color: $light-text-color;
+      }
+    }
+  }
+}
+// stock 
+.stock {
+  .qty {
+    @include flex($justify: space-between);
+  }
+  .bar {
+    height: 3px;
+    margin-top: 1em;
+    background-color: $border-color;
+    overflow: hidden;
+    .available {
+      height: 3px;
+      width: 21%;
+      background-color: $secondary-color;
+    }
+  }
 }
