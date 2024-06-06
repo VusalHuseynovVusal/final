@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <div id="page" class="site page-single">
+    <div id="page" class="site page-category">
       <aside class="site-off desktop-hide">
         <div class="off-canvas">
           <div class="canvas-head">
@@ -227,19 +227,93 @@
                       </div>
                     </a>
                   </li>
-                  <li>
-                    <a href="#" class="iscart">
+                  <li class="iscart">
+                    <a href="#" >
                       <div class="icon-large">
                         <i class="ri-shopping-cart-line"></i>
                         <div class="fly-item">
-                          <span class="item-number">0</span>
+                          <span class="item-number">5</span>
                         </div>
                       </div>
                       <div class="icon-text">
                         <div class="mini-text">Total</div>
-                        <div class="cart-total">$0.00</div>
+                        <div class="cart-total">$1.622</div>
                       </div>
                     </a>
+                    <div class="mini-cart">
+                      <div class="content">
+                        <div class="cart-head">
+                          5 items in cart
+                        </div>
+                        <div class="cart-body">
+                          <ul class="products mini">
+                            <li class="item">
+                              <div class="thumbnail object-cover">
+                                <a href="#"><img src="assets/products/home2.jpg" alt=""></a>
+                              </div>
+                              <div class="item-content">
+                                <p><a href="#">Dimmable Ceiling Light Modern</a></p>
+                                <span class="price">
+                                  <span>$279.99</span>
+                                  <span class="fly-item"><span>2x</span></span>
+                                </span>
+                              </div>
+                              <a href="#" class="item-remove"><i class="ri-close-line"></i></a>
+                            </li>
+                            <li class="item">
+                              <div class="thumbnail object-cover">
+                                <a href="#"><img src="assets/products/home3.jpg" alt=""></a>
+                              </div>
+                              <div class="item-content">
+                                <p><a href="#">Modern Storage Cabinet with Door & 3 Drawers</a></p>
+                                <span class="price">
+                                  <span>$129.99</span>
+                                  <span class="fly-item"><span>1x</span></span>
+                                </span>
+                              </div>
+                              <a href="#" class="item-remove"><i class="ri-close-line"></i></a>
+                            </li>
+                            <li class="item">
+                              <div class="thumbnail object-cover">
+                                <a href="#"><img src="assets/products/home4.jpg" alt=""></a>
+                              </div>
+                              <div class="item-content">
+                                <p><a href="#">Vodanda Velvet Sofa Couch</a></p>
+                                <span class="price">
+                                  <span>$352.99</span>
+                                  <span class="fly-item"><span>1x</span></span>
+                                </span>
+                              </div>
+                              <a href="#" class="item-remove"><i class="ri-close-line"></i></a>
+                            </li>
+                            <li class="item">
+                              <div class="thumbnail object-cover">
+                                <a href="#"><img src="assets/products/home5.jpg" alt=""></a>
+                              </div>
+                              <div class="item-content">
+                                <p><a href="#">Awesome Bed for a Couple</a></p>
+                                <span class="price">
+                                  <span>$579.99</span>
+                                  <span class="fly-item"><span>1x</span></span>
+                                </span>
+                              </div>
+                              <a href="#" class="item-remove"><i class="ri-close-line"></i></a>
+                            </li>
+                           
+                          </ul>
+                        </div>
+                        <div class="cart-footer">
+                          <div class="subtotal">
+                            <p>Subtotal</p>
+                            <p><strong>$1,622.95</strong></p>
+                          </div>
+                          <div class="actions">
+                            <a href="/cart.html" class="primary-button">Checkout</a>
+                            <a href="/checkout.html" class="secondary-button">View Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -475,484 +549,624 @@
 
       <!-- MAIN  -->
       <main>
-        <!-- SINGLE PRODUCT  -->
 
-        <div class="single-product">
+        <!-- SINGLE-CATAGORY   -->
+        <div class="single-category">
           <div class="container">
             <div class="wrapper">
-              <!-- breadcrumb  -->
-              <div class="breadcrumb">
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Shoes</a></li>
-                  <li>Men Slip On Shoes Casual with Arch Support Insoles</li>
-                </ul>
-              </div>
-              <!-- column  -->
               <div class="column">
-                <div class="products one">
-                  <div class="flexwrap">
-                    <div class="row stick">
-                      <div class="item is_sticky">
-                        <div class="price">
-                          <span class="discount">32% <br />OFF</span>
-                        </div>
-                        <div class="big-image mySwiper2">
-                          <div class="big-image-wrapper swiper-wrapper">
-                            <div class="image-show swiper-slide">
-                              <a
-                                data-fslightbox
-                                href="assets/products/apparel4.jpg"
-                                ><img
-                                  src="assets/products/apparel4.jpg"
-                                  alt=""
-                                />
-                              </a>
-                            </div>
-                            <div class="image-show swiper-slide">
-                              <a
-                                data-fslightbox
-                                href="assets/products/apparel5.jpg"
-                                ><img
-                                  src="assets/products/apparel5.jpg"
-                                  alt=""
-                                />
-                              </a>
-                            </div>
-                            <div class="image-show swiper-slide">
-                              <a
-                                data-fslightbox
-                                href="assets/products/apparel6.jpg"
-                                ><img
-                                  src="assets/products/apparel6.jpg"
-                                  alt=""
-                                />
-                              </a>
-                            </div>
+                <div class="holder">
+                  <div class="row sidebar">
+                    <div class="filter">
+                      <div class="filter-block">
+                        <h4>Category</h4>
+                        <ul>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="bags" />
+                            <label for="bags">
+                              <span class="checked"></span>
+                              <span>Bags</span>
+                            </label>
+                            <span class="count">15</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="beauty"
+                            />
+                            <label for="beauty">
+                              <span class="checked"></span>
+                              <span>Beauty</span>
+                            </label>
+                            <span class="count">2</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="clothing"
+                            />
+                            <label for="clothing">
+                              <span class="checked"></span>
+                              <span>Clothing</span>
+                            </label>
+                            <span class="count">3</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="jewelry"
+                            />
+                            <label for="jewelry">
+                              <span class="checked"></span>
+                              <span>Jewelry</span>
+                            </label>
+                            <span class="count">1</span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="shoes" />
+                            <label for="shoes">
+                              <span class="checked"></span>
+                              <span>Shoes</span>
+                            </label>
+                            <span class="count">7</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filter-block">
+                        <h4>Activity</h4>
+                        <ul>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="athletic"
+                            />
+                            <label for="athletic">
+                              <span class="checked"></span>
+                              <span>Athletic</span>
+                            </label>
+                            <span class="count">11</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="lounge"
+                            />
+                            <label for="lounge">
+                              <span class="checked"></span>
+                              <span>Lounge</span>
+                            </label>
+                            <span class="count">13</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="outdoor"
+                            />
+                            <label for="outdoor">
+                              <span class="checked"></span>
+                              <span>Outdoor</span>
+                            </label>
+                            <span class="count">7</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="travel"
+                            />
+                            <label for="travel">
+                              <span class="checked"></span>
+                              <span>Travel</span>
+                            </label>
+                            <span class="count">3</span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="urban" />
+                            <label for="urban">
+                              <span class="checked"></span>
+                              <span>Urban</span>
+                            </label>
+                            <span class="count">4</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filter-block">
+                        <h4>Brands</h4>
+                        <ul>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="nike" />
+                            <label for="nike">
+                              <span class="checked"></span>
+                              <span>Nike</span>
+                            </label>
+                            <span class="count">9</span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="louis" />
+                            <label for="louis">
+                              <span class="checked"></span>
+                              <span>Louis</span>
+                            </label>
+                            <span class="count">7</span>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              name="checkbox"
+                              id="hermes"
+                            />
+                            <label for="hermes">
+                              <span class="checked"></span>
+                              <span>Hermes</span>
+                            </label>
+                            <span class="count">2</span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="gucci" />
+                            <label for="gucci">
+                              <span class="checked"></span>
+                              <span>Gucci</span>
+                            </label>
+                            <span class="count">6</span>
+                          </li>
+                          <li>
+                            <input type="checkbox" name="checkbox" id="zara" />
+                            <label for="zara">
+                              <span class="checked"></span>
+                              <span>Zara</span>
+                            </label>
+                            <span class="count">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filter-block products">
+                        <h4>Color</h4>
+                        <ul class="bycolor variant">
+                          <li>
+                            <input type="radio" name="color" id="cogrey" />
+                            <label for="cogrey" class="circle"></label>
+                          </li>
+                          <li>
+                            <input type="radio" name="color" id="coblue" />
+                            <label for="coblue" class="circle"></label>
+                          </li>
+                          <li>
+                            <input type="radio" name="color" id="cogreen" />
+                            <label for="cogreen" class="circle"></label>
+                          </li>
+                          <li>
+                            <input type="radio" name="color" id="cored" />
+                            <label for="cored" class="circle"></label>
+                          </li>
+                          <li>
+                            <input type="radio" name="color" id="colight" />
+                            <label for="colight" class="circle"></label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filter-block pricing">
+                        <h4>Price</h4>
+                        <div class="byprice">
+                          <div class="range-track">
+                            <input
+                              type="range"
+                              value="25000"
+                              min="0"
+                              max="100000"
+                            />
                           </div>
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                        </div>
-
-                        <div thumbSlider="" class="small-image mySwiper">
-                          <div class="small-image-wrapper swiper-wrapper">
-                            <div class="thumbnail-show swiper-slide">
-                              <img src="assets/products/apparel4.jpg" alt="" />
-                            </div>
-                            <li class="thumbnail-show swiper-slide">
-                              <img src="assets/products/apparel5.jpg" alt="" />
-                            </li>
-                            <li class="thumbnail-show swiper-slide">
-                              <img src="assets/products/apparel6.jpg" alt="" />
-                            </li>
+                          <div class="price-range">
+                            <span class="price-form">$50</span>
+                            <span class="price-to">$500</span>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="section">
                     <div class="row">
-                      <div class="item">
-                        <h1>Happy Sailed Women's Summer Boho Floral</h1>
-                        <div class="content">
-                          <div class="rating">
-                            <div class="stars"></div>
-                            <a href="" class="mini-text">2,251 reviews</a>
-                            <a href="" class="add-review mini-text"
-                              >Add Your Review</a
-                            >
+                      <div class="cathead">
+                        <div class="breadcrumb">
+                          <ul>
+                            <li><a href="#">Home</a></li>
+                            <li>Women</li>
+                          </ul>
+                        </div>
+                        <div class="page-title">
+                          <h1>Women</h1>
+                        </div>
+                        <div class="cat-description">
+                          <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Qui dolores soluta aliquid et distinctio vel
+                            praesentium impedit, magnam at quis natus? Id
+                            possimus quam itaque beatae dolorum, necessitatibus
+                            maxime, earum unde ducimus ad accusamus veritatis
+                            illum, rerum perspiciatis laborum nihil veniam
+                            deleniti! Cupiditate tempore repellat ipsum deleniti
+                            assumenda labore hic. Sequi officiis maxime illum
+                            facilis impedit enim minus magni temporibus
+                            deleniti, voluptas ad pariatur quia porro? Quo eos
+                            rerum ullam debitis sapiente quasi temporibus
+                            maiores, soluta, ab deserunt saepe quas fuga
+                            consequatur dolorum eius qui ducimus tenetur. Ab
+                            iusto exercitationem accusamus ipsum, vel quasi sit
+                            necessitatibus nemo quos esse est.
+                          </p>
+                        </div>
+                        <div class="cat-navigation">
+                          <div class="item-filter desktop-hide">
+                            <a href="#" class="filter-trigger label">
+                              <i class="ri-menu-2-line ri-2x"></i>
+                              <span>Filter</span>
+                            </a>
                           </div>
-                          <div class="stock-sku">
-                            <span class="available">In Stock</span>
-                            <span class="sku mini-text">SKU-181</span>
-                          </div>
-                          <div class="price">
-                            <div class="current">$80.90</div>
-                            <div class="normal">$119.90</div>
-                          </div>
-                          <!-- <div class="colors">
-                            <p>Color</p>
-                            <div class="variant">
-                              <form action="">
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="cogrey"
-                                  />
-                                  <label for="cogrey" class="circle"></label>
-                                </p>
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="coblue"
-                                  />
-                                  <label for="coblue" class="circle"></label>
-                                </p>
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="cogreen"
-                                  />
-                                  <label for="cogreen" class="circle"></label>
-                                </p>
-                              </form>
+                          <div class="item-sortir">
+                            <div class="label">
+                              <span class="mobile-hide">Sort by default</span>
+                              <div class="desktop-hide">Default</div>
+                              <i class="ri-arrow-down-s-line"></i>
                             </div>
-                          </div> -->
-
-                          <div class="stock mini-text" data-stock="4000">
-                            <div class="qty">
-                              <span
-                                >Sold:
-                                <strong class="qty-sold">3459</strong></span
-                              >
-                              <span
-                                >Stock:
-                                <strong class="qty-available">107</strong></span
-                              >
-                            </div>
-                            <div class="bar">
-                              <div class="available"></div>
-                            </div>
-                          </div>
-                          <div class="offer">
-                            <p>Offer ends at</p>
-                            <ul class="flexcenter">
-                              <li>1</li>
-                              <li>15</li>
-                              <li>27</li>
-                              <li>07</li>
+                            <ul>
+                              <li>Default</li>
+                              <li>Product Name</li>
+                              <li>Price</li>
+                              <li>Brand</li>
                             </ul>
                           </div>
-                          <div class="sizes">
-                            <p>Size</p>
-                            <div class="variant">
-                              <form action="">
-                                <p>
-                                  <input
-                                    type="radio"
-                                    checked
-                                    name="color"
-                                    id="size-40"
-                                  />
-                                  <label for="size-40" class="circle"
-                                    ><span>40</span></label
-                                  >
-                                </p>
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="size-41"
-                                  />
-                                  <label for="size-41" class="circle"
-                                    ><span>41</span></label
-                                  >
-                                </p>
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="size-42"
-                                  />
-                                  <label for="size-42" class="circle"
-                                    ><span>42</span></label
-                                  >
-                                </p>
-                                <p>
-                                  <input
-                                    type="radio"
-                                    name="color"
-                                    id="size-43"
-                                  />
-                                  <label for="size-43" class="circle"
-                                    ><span>43</span></label
-                                  >
-                                </p>
-                              </form>
-                            </div>
+                          <div class="item-perpage mobile-hide">
+                            <div class="label">Items 10 per page</div>
+                            <div class="desktop-hide">10</div>
                           </div>
-                          <div class="actions">
-                            <div class="qty-control">
-                              <button class="minus circle">-</button>
-                              <input type="text" value="1" />
-                              <button class="plus circle">+</button>
+                          <div class="item-options">
+                            <div class="label">
+                              <span class="mobile-hide">Show 10 per page</span>
+                              <div class="desktop-hide">10</div>
+                              <i class="ri-arrow-down-s-line"></i>
                             </div>
-                            <div class="button-cart">
-                              <button class="primary-button">
-                                Add to cart
-                              </button>
-                            </div>
-                            <div class="wish-share">
-                              <ul class="second-links">
-                                <li>
-                                  <a href="#">
-                                    <span class="icon-large"
-                                      ><i class="ri-heart-line"></i
-                                    ></span>
-                                    <span>Wishlist</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <span class="icon-large"
-                                      ><i class="ri-share-line"></i
-                                    ></span>
-                                    <span>Share</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="description collapse">
                             <ul>
-                              <li class="has-child expand">
-                                <a href="#0" class="icon-small">Information</a>
-                                <ul class="content">
-                                  <li><span>Brands</span><span>Nike</span></li>
-                                  <li>
-                                    <span>Activity</span><span>Running</span>
-                                  </li>
-                                  <li>
-                                    <span>Material</span><span>Fleece</span>
-                                  </li>
-                                  <li><span>Gender</span><span>Men</span></li>
-                                </ul>
-                              </li>
-                              <li class="has-child">
-                                <a href="#0" class="icon-small">Details</a>
-                                <div class="content">
-                                  <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Cum illum autem qui
-                                    aspernatur doloremque dignissimos nihil
-                                    perferendis! Ad sunt illum commodi
-                                    voluptatibus id eius, impedit explicabo cum
-                                    minima, doloremque repudiandae.
-                                  </p>
-                                  <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Cum illum autem qui
-                                    aspernatur doloremque dignissimos nihil
-                                    perferendis! Ad sunt illum commodi
-                                    voluptatibus id eius, impedit explicabo cum
-                                    minima, doloremque repudiandae.
-                                  </p>
-                                </div>
-                              </li>
-                              <li class="has-child">
-                                <a href="#0" class="icon-small">Custom</a>
-                                <div class="content">
-                                  <table>
-                                    <thead>
-                                      <tr>
-                                        <th>Size</th>
-                                        <th>
-                                          Bust
-                                          <span class="mini-text">(cm)</span>
-                                        </th>
-                                        <th>
-                                          Waist
-                                          <span class="mini-text">(cm)</span>
-                                        </th>
-                                        <th>
-                                          Hip
-                                          <span class="mini-text">(cm)</span>
-                                        </th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>XS</td>
-                                        <td>82,5</td>
-                                        <td>62</td>
-                                        <td>87,5</td>
-                                      </tr>
-                                      <tr>
-                                        <td>S</td>
-                                        <td>85</td>
-                                        <td>63,5</td>
-                                        <td>63,89</td>
-                                      </tr>
-                                      <tr>
-                                        <td>M</td>
-                                        <td>87,5</td>
-                                        <td>67,5</td>
-                                        <td>93</td>
-                                      </tr>
-                                      <tr>
-                                        <td>L</td>
-                                        <td>90</td>
-                                        <td>72,5</td>
-                                        <td>98</td>
-                                      </tr>
-                                      <tr>
-                                        <td>XL</td>
-                                        <td>93</td>
-                                        <td>77,5</td>
-                                        <td>103</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </li>
-                              <li class="has-child expand">
-                                <a href="#" class="icon-small"
-                                  >Reviews
-                                  <span class="mini-text">2.2k</span></a
-                                >
-                                <div class="content">
-                                  <div class="reviews">
-                                    <h4>Customers Reviews</h4>
-                                    <div class="review-block">
-                                      <div class="review-block-head">
-                                        <div class="flexitem">
-                                          <span class="rate-sum">4.9</span
-                                          ><span>2,251 Reviews</span>
-                                        </div>
-                                        <a
-                                          href="#review-form"
-                                          class="secondary-button"
-                                          >Write review</a
-                                        >
-                                      </div>
-                                      <div class="review-block-body">
-                                        <ul>
-                                          <li class="item">
-                                            <div class="review-form">
-                                              <p class="person">
-                                                Review by Sarah
-                                              </p>
-                                              <p class="mini-text">On 7/7/22</p>
-                                            </div>
-                                            <div class="review-rating rating">
-                                              <div class="stars"></div>
-                                            </div>
-                                            <div class="review-title">
-                                              <p>Awesome product!</p>
-                                            </div>
-                                            <div class="review-text">
-                                              <p>
-                                                Lorem ipsum, dolor sit amet
-                                                consectetur adipisicing elit.
-                                                Iure obcaecati magni tempora a
-                                                maxime aperiam.
-                                              </p>
-                                            </div>
-                                          </li>
-                                          <li class="item">
-                                            <div class="review-form">
-                                              <p class="person">
-                                                Review by Sarah
-                                              </p>
-                                              <p class="mini-text">On 7/7/22</p>
-                                            </div>
-                                            <div class="review-rating rating">
-                                              <div class="stars"></div>
-                                            </div>
-                                            <div class="review-title">
-                                              <p>Awesome product!</p>
-                                            </div>
-                                            <div class="review-text">
-                                              <p>
-                                                Lorem ipsum, dolor sit amet
-                                                consectetur adipisicing elit.
-                                                Iure obcaecati magni tempora a
-                                                maxime aperiam.
-                                              </p>
-                                            </div>
-                                          </li>
-                                        </ul>
-                                        <div class="second-links">
-                                          <a href="#" class="view-all"
-                                            >View all reviews
-                                            <i class="ri-arrow-right-line"></i
-                                          ></a>
-                                        </div>
-                                      </div>
-                                      <div id="review-rorm" class="review-form">
-                                        <h4>Write a review</h4>
-                                        <div class="rating">
-                                          <p>Are you satisfied enough?</p>
-                                          <div class="rate-this">
-                                            <input
-                                              type="radio"
-                                              name="rating"
-                                              id="star5"
-                                            />
-                                            <label for="star5"
-                                              ><i class="ri-star-fill"></i
-                                            ></label>
-
-                                            <input
-                                              type="radio"
-                                              name="rating"
-                                              id="star4"
-                                            />
-                                            <label for="star4"
-                                              ><i class="ri-star-fill"></i
-                                            ></label>
-
-                                            <input
-                                              type="radio"
-                                              name="rating"
-                                              id="star3"
-                                            />
-                                            <label for="star3"
-                                              ><i class="ri-star-fill"></i
-                                            ></label>
-
-                                            <input
-                                              type="radio"
-                                              name="rating"
-                                              id="star2"
-                                            />
-                                            <label for="star2"
-                                              ><i class="ri-star-fill"></i
-                                            ></label>
-
-                                            <input
-                                              type="radio"
-                                              name="rating"
-                                              id="star1"
-                                            />
-                                            <label for="star1"
-                                              ><i class="ri-star-fill"></i
-                                            ></label>
-                                          </div>
-                                        </div>
-                                        <form action="">
-                                          <p>
-                                            <label>Name</label>
-                                            <input type="text" />
-                                          </p>
-                                          <p>
-                                            <label>Summary</label>
-                                            <input type="text" />
-                                          </p>
-
-                                          <p>
-                                            <label>Review</label>
-                                            <textarea
-                                              cols="30"
-                                              rows="10"
-                                            ></textarea>
-                                          </p>
-                                          <p>
-                                            <a href="#" class="primary-button"
-                                              >Submit Review</a
-                                            >
-                                          </p>
-                                        </form>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
+                              <li>10</li>
+                              <li>20</li>
+                              <li>30</li>
+                              <li>All</li>
                             </ul>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="products main">
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/apparel1.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>25%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(1,955)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#">Under Armour Men's Tech</a>
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$129.99</span>
+                            <span class="normal mini-text">$189.98</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/apparel2.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>47%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(994)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#"
+                              >Women's Lightweight Knit Hoodie Sweater Pullover</a
+                            >
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$37.50</span>
+                            <span class="normal mini-text">$46.50</span>
+                          </div>
+                          <div class="footer">
+                            <ul class="mini-text">
+                              <li>Polyester, Cotton</li>
+                              <li>Pull On closure</li>
+                              <li>Fashion Personality</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/apparel3.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>31%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(3,459)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#">Happy Sailed Womens Summer Boho Floral</a>
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$129.99</span>
+                            <span class="normal mini-text">$189.98</span>
+                          </div>
+                          <div class="footer">
+                            <ul class="mini-text">
+                              <li>65% Polyester, 35% Cotton</li>
+                              <li>Imported</li>
+                              <li>Machine Wash</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/apparel4.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>35%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(10)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#">Women's Summer Boho Floral</a>
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$118.90</span>
+                            <span class="normal mini-text">$189.90</span>
+                          </div>
+                          <div class="footer">
+                            <ul class="mini-text">
+                              <li>Corduroy</li>
+                              <li>Imported</li>
+                              <li>Button closure closure</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/shoe1.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>32%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(2,251)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#"
+                              >Men Slip On Shoes Casual with Arch Support Insoles</a
+                            >
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$80.90</span>
+                            <span class="normal mini-text">$119.90</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/shoe2.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>30%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(1,237)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#"
+                              >Skechers Women's Go Joy Walking Shoe Sneaker</a
+                            >
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$45.95</span>
+                            <span class="normal mini-text">$64.95</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/shoe3.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>25%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(106)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#">Walking Shoe Sneaker Womens</a>
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$139.99</span>
+                            <span class="normal mini-text">$189.98</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="media">
+                          <div class="thumbnail">
+                            <a href="#">
+                              <img src="./assets/products/shoe4.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="hoverable">
+                            <ul>
+                              <li class="active">
+                                <a href="#"><i class="ri-heart-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-eye-line"></i></a>
+                              </li>
+                              <li>
+                                <a href="#"><i class="ri-shuffle-line"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="discount"><span>24%</span></div>
+                        </div>
+                        <div class="content">
+                          <div class="rating">
+                            <div class="stars"></div>
+                            <span class="mini-text">(24)</span>
+                          </div>
+                          <h3 class="main-links">
+                            <a href="#">Women Summer Tosca Shoe</a>
+                          </h3>
+    
+                          <div class="price">
+                            <span class="current">$104.90</span>
+                            <span class="normal mini-text">$189.90</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="load-more">
+                      <a href="#" class="secondary-button">Load more</a>
                     </div>
                   </div>
                 </div>
@@ -960,767 +1174,6 @@
             </div>
           </div>
         </div>
-
-        <!-- FEATURES SECTION -->
-
-        <section class="features related-products">
-          <div class="container">
-            <div class="wrapper">
-              <div class="column">
-                <div class="sectop">
-                  <h2>
-                    <span class="circle"></span><span>Related products</span>
-                  </h2>
-                  <div class="second-links">
-                    <a href="#" class="view-all"
-                      >View all<i class="ri-arrow-right-line"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="products main">
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel1.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>25%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="offer">
-                        <p class="mini-text">Offer ends at</p>
-                        <ul class="flexcenter">
-                          <li>1</li>
-                          <li>15</li>
-                          <li>27</li>
-                          <li>07</li>
-                        </ul>
-                      </div>
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(1,955)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Under Armour Men's Tech</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$56.50</span>
-                        <span class="normal mini-text">$75.50</span>
-                      </div>
-                      <div class="stock mini-text" data-stock="4000">
-                        <div class="qty">
-                          <span
-                            >Sold: <strong class="qty-sold">3459</strong></span
-                          >
-                          <span
-                            >Stock:
-                            <strong class="qty-available">107</strong></span
-                          >
-                        </div>
-                        <div class="bar">
-                          <div class="available"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel2.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>47%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="offer">
-                        <p class="mini-text">Offer ends at</p>
-                        <ul class="flexcenter">
-                          <li>1</li>
-                          <li>15</li>
-                          <li>27</li>
-                          <li>07</li>
-                        </ul>
-                      </div>
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(994)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Women's Lightweight Knit Hoodie Sweater Pullover</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$37.50</span>
-                        <span class="normal mini-text">$46.50</span>
-                      </div>
-                      <div class="stock mini-text" data-stock="4000">
-                        <div class="qty">
-                          <span
-                            >Sold: <strong class="qty-sold">1025</strong></span
-                          >
-                          <span
-                            >Stock:
-                            <strong class="qty-available">2975</strong></span
-                          >
-                        </div>
-                        <div class="bar">
-                          <div class="available"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel3.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>31%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="offer">
-                        <p class="mini-text">Offer ends at</p>
-                        <ul class="flexcenter">
-                          <li>1</li>
-                          <li>15</li>
-                          <li>27</li>
-                          <li>07</li>
-                        </ul>
-                      </div>
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(3,459)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Happy Sailed Womens Summer Boho Floral</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$129.99</span>
-                        <span class="normal mini-text">$189.98</span>
-                      </div>
-                      <div class="stock mini-text" data-stock="4000">
-                        <div class="qty">
-                          <span
-                            >Sold: <strong class="qty-sold">1416</strong></span
-                          >
-                          <span
-                            >Stock:
-                            <strong class="qty-available">2584</strong></span
-                          >
-                        </div>
-                        <div class="bar">
-                          <div class="available"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel4.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>35%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="offer">
-                        <p class="mini-text">Offer ends at</p>
-                        <ul class="flexcenter">
-                          <li>1</li>
-                          <li>15</li>
-                          <li>27</li>
-                          <li>07</li>
-                        </ul>
-                      </div>
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(10)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Women's Summer Boho Floral</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$118.90</span>
-                        <span class="normal mini-text">$189.90</span>
-                      </div>
-                      <div class="stock mini-text" data-stock="4000">
-                        <div class="qty">
-                          <span
-                            >Sold: <strong class="qty-sold">3218</strong></span
-                          >
-                          <span
-                            >Stock:
-                            <strong class="qty-available">782</strong></span
-                          >
-                        </div>
-                        <div class="bar">
-                          <div class="available"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe1.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>32%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(2,251)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Men Slip On Shoes Casual with Arch Support Insoles</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$80.90</span>
-                        <span class="normal mini-text">$119.90</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe2.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>30%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(1,237)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Skechers Women's Go Joy Walking Shoe Sneaker</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$45.95</span>
-                        <span class="normal mini-text">$64.95</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe3.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>25%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(106)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Walking Shoe Sneaker Womens</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$139.99</span>
-                        <span class="normal mini-text">$189.98</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe4.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>24%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(24)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Women Summer Tosca Shoe</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$104.90</span>
-                        <span class="normal mini-text">$189.90</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        -->
-        <section class="features">
-          <div class="container">
-            <div class="wrapper">
-              <div class="column">
-                <div class="sectop">
-                  <h2>
-                    <span class="circle"></span><span>Related products</span>
-                  </h2>
-                  <div class="second-links">
-                    <a href="#" class="view-all"
-                      >View all<i class="ri-arrow-right-line"></i
-                    ></a>
-                  </div>
-                </div>
-                <div class="products main">
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel1.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>25%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(1,955)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Under Armour Men's Tech</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$129.99</span>
-                        <span class="normal mini-text">$189.98</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel2.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>47%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(994)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Women's Lightweight Knit Hoodie Sweater Pullover</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$37.50</span>
-                        <span class="normal mini-text">$46.50</span>
-                      </div>
-                      <div class="footer">
-                        <ul class="mini-text">
-                          <li>Polyester, Cotton</li>
-                          <li>Pull On closure</li>
-                          <li>Fashion Personality</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel3.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>31%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(3,459)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Happy Sailed Womens Summer Boho Floral</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$129.99</span>
-                        <span class="normal mini-text">$189.98</span>
-                      </div>
-                      <div class="footer">
-                        <ul class="mini-text">
-                          <li>65% Polyester, 35% Cotton</li>
-                          <li>Imported</li>
-                          <li>Machine Wash</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/apparel4.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>35%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(10)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Women's Summer Boho Floral</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$118.90</span>
-                        <span class="normal mini-text">$189.90</span>
-                      </div>
-                      <div class="footer">
-                        <ul class="mini-text">
-                          <li>Corduroy</li>
-                          <li>Imported</li>
-                          <li>Button closure closure</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe1.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>32%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(2,251)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Men Slip On Shoes Casual with Arch Support Insoles</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$80.90</span>
-                        <span class="normal mini-text">$119.90</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe2.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>30%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(1,237)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#"
-                          >Skechers Women's Go Joy Walking Shoe Sneaker</a
-                        >
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$45.95</span>
-                        <span class="normal mini-text">$64.95</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe3.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>25%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(106)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Walking Shoe Sneaker Womens</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$139.99</span>
-                        <span class="normal mini-text">$189.98</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="media">
-                      <div class="thumbnail">
-                        <a href="#">
-                          <img src="./assets/products/shoe4.jpg" alt="" />
-                        </a>
-                      </div>
-                      <div class="hoverable">
-                        <ul>
-                          <li class="active">
-                            <a href="#"><i class="ri-heart-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-eye-line"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="ri-shuffle-line"></i></a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="discount"><span>24%</span></div>
-                    </div>
-                    <div class="content">
-                      <div class="rating">
-                        <div class="stars"></div>
-                        <span class="mini-text">(24)</span>
-                      </div>
-                      <h3 class="main-links">
-                        <a href="#">Women Summer Tosca Shoe</a>
-                      </h3>
-
-                      <div class="price">
-                        <span class="current">$104.90</span>
-                        <span class="normal mini-text">$189.90</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <!-- BANNER SECTION  -->
 
@@ -2000,7 +1453,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#0">
+                    <a href="#0" class="cart-trigger">
                       <i class="ri-shopping-cart-line"></i>
                       <span>Cart</span>
                       <span class="fly-item">
@@ -2040,5 +1493,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+      // FILTER
+      const FtoShow = ".filter";
+      const Fpopup = document.querySelector(FtoShow);
+      const Ftrigger = document.querySelector(".filter-trigger");
+
+      Ftrigger.addEventListener("click", () => {
+        setTimeout(() => {
+          if (!Fpopup.classList.contains("show")) {
+            Fpopup.classList.add("show");
+          }
+        }, 250);
+      });
+
+      // auto close by click outside .filter
+      document.addEventListener("click", (e) => {
+        const isClosest = e.target.closest(FtoShow);
+        if (!isClosest && Fpopup.classList.contains("show")) {
+          Fpopup.classList.remove("show");
+        }
+      });
+    </script>
   </body>
 </html>
