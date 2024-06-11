@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin maxwidth($maxWidth: 639px) {
+  @media only screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
 @mixin mobile($minWidth: 768px) {
   @media only screen and (min-width: $minWidth) {
     @content;

@@ -1,0 +1,35 @@
+// .single-checkout {
+//   .container {
+//     .wrapper {
+//       .checkout {
+//         @include flex($wrap: wrap, $align: stretch);
+//         margin: 5em 0;
+//         .left {
+//           padding: 4em;
+//           background-color: $light-bg-color;
+//           box-shadow: 0 15px 70px -8px rgb(0 0 0 / 20%);
+//         }
+//         .item {
+//           @include flex($align: stretch);
+//           flex-direction: column;
+//           @include tablet() {
+//             flex: 0 0 50%;
+//             width: 50%;
+//           }
+//           width: 100%;
+//         }
+//         .styled {
+//           & :where(input, select, textarea) {
+//             padding: 0.75em;
+//             outline: 0;
+//             background-color: $white-color;
+//             border-width: 0 0 3px 0;
+//             border-style: solid;
+//             border-color: $border-color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
