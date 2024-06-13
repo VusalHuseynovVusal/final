@@ -225,8 +225,9 @@
                         }
                       }
                     }
-                    @include flex($direction: column, $align: start);
+                    @include flex($direction: column, $align: stretch);
                     .price {
+                      // margin-top: auto;
                       .current {
                         font-size: calc(1em + 1vw);
                         color: $primiry-color;

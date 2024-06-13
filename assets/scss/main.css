@@ -2039,7 +2039,10 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
   top: 0;
   right: 0;
 }
-.trending .container .wrapper .column .flexwrap .products .item .media .hoverable li a {
+.trending .container .wrapper .column .flexwrap .products .item .media .hoverable li {
+  margin: 0 0 3px 0;
+}
+.trending .container .wrapper .column .flexwrap .products .item .media .hoverable li button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2052,8 +2055,10 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
   border-radius: 50%;
   line-height: 1;
   background-color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: 0.3s all;
+  border: 0;
+  cursor: pointer;
 }
 .trending .container .wrapper .column .flexwrap .products .item .media .discount {
   display: flex;
@@ -2208,8 +2213,11 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
 .trending .container .wrapper .column .flexwrap .products:where(.mini, .main) h3 {
   font-weight: 400;
 }
-.trending .container .wrapper .column .flexwrap .products .item:hover .hoverable li a {
+.trending .container .wrapper .column .flexwrap .products .item:hover .hoverable li button {
   opacity: 1;
+}
+.trending .container .wrapper .column .flexwrap .hoverable li button:hover {
+  box-shadow: 0 0 6px 2px #fff;
 }
 .trending .container .wrapper .column .flexwrap .products .hoverable li a:hover {
   color: #fff !important;
@@ -2233,6 +2241,15 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
 .trending .container .wrapper .column .flexwrap .products:where(.big, .main, .one) .content {
   gap: 1em;
   margin-top: 1.25em;
+}
+
+.trending .container .wrapper .column .flexwrap div.trending__products {
+  flex: 1 !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+.trending .container .wrapper .column .flexwrap div.trending__products .item {
+  flex-basis: 50%;
 }
 
 .features .container .wrapper .column .sectop {
@@ -2278,7 +2295,7 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: start;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 .features .container .wrapper .column .products.main :where(.image, .thumbnail):hover img {
@@ -2388,6 +2405,9 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
 }
 .features .container .wrapper .column .products.main .item .content h3 a:hover {
   text-decoration: underline;
+}
+.features .container .wrapper .column .products.main .item .content .price {
+  margin-top: auto;
 }
 .features .container .wrapper .column .products.main .item .content .price .current {
   font-size: calc(1em + 1vw);
@@ -3453,7 +3473,7 @@ nav .mega .container .wrapper .flexcol.products .text-content h4 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: start;
+  align-items: stretch;
   flex-wrap: nowrap;
 }
 .single-category .container .wrapper .column .holder .section .products.main .item .content h3 {
@@ -3895,11 +3915,16 @@ input[type=range]::-webkit-slider-thumb {
   border: 0;
   outline: 0;
   font-size: 0 2.5em;
-  line-height: 54px;
+  line-height: 55px;
   background-color: #0a021c;
   color: #fff;
   width: 150px;
   cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.products.cart .flexwrap .cart-summary .item .coupon button:hover {
+  background-color: #ff6b6b;
+  color: #f2f3f5;
 }
 .products.cart .flexwrap .cart-summary .item .coupon input {
   font-size: 1.1em;
@@ -4044,6 +4069,11 @@ input[type=range]::-webkit-slider-thumb {
 .products.cart table td :where(.content, .qty-control, p) {
   margin: 0;
   padding: 0;
+}
+.products.cart table button {
+  background: none;
+  border: 0;
+  cursor: pointer;
 }
 .products.cart table :where(th, td) {
   padding: 2em 1em;

@@ -146,6 +146,7 @@
           }
         }
       }
+
       .column {
         .flexwrap {
           @include flex($wrap: wrap, $align: start);
@@ -156,6 +157,8 @@
           }
 
           // PRODUCTS
+
+
 
           .products {
             .item {
@@ -201,7 +204,8 @@
                   top: 0;
                   right: 0;
                   li {
-                    a {
+                    margin: 0 0 3px 0;
+                    button {
                       @include flex($justify: center);
                       width: 28px;
                       height: 28px;
@@ -210,8 +214,11 @@
                       border-radius: 50%;
                       line-height: 1;
                       background-color: $white-color;
-                      opacity: 0.5;
+                      opacity: .7;
                       transition: 0.3s all;
+                      border: 0;
+                      cursor: pointer;
+                     
                     }
                   }
                 }
@@ -359,9 +366,12 @@
           .products:where(.mini, .main) h3 {
             font-weight: 400;
           }
-          .products .item:hover .hoverable li a {
+          .products .item:hover .hoverable li button {
             opacity: 1;
           }
+          .hoverable li button:hover{
+            box-shadow: 0 0 6px 2px #fff;
+          } 
           .products .hoverable li a:hover {
             color: $white-color !important;
             background-color: $dark-color !important;
@@ -392,6 +402,15 @@
 }
 
 //  FEATURES SECTION
+.trending .container .wrapper .column .flexwrap div.trending__products{
+  flex: 1 !important;
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    flex-basis: 50%;
+  }
+}
+
 
 .features {
   .container {
@@ -434,7 +453,7 @@
         }
         .products {
           &.main {
-            @include flex($align: start, $wrap: wrap);
+            @include flex($align: stretch, $wrap: wrap);
             & :where(.image, .thumbnail) {
               &:hover {
                 img {
@@ -538,6 +557,7 @@
                 }
                 @include flex($direction: column, $align: start);
                 .price {
+                  margin-top: auto;
                   .current {
                     font-size: calc(1em + 1vw);
                     color: $primiry-color;

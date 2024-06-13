@@ -27,11 +27,16 @@
             border: 0;
             outline: 0;
             font-size: 0 2.5em;
-            line-height: 54px;
+            line-height: 55px;
             background-color: $dark-color;
             color: $white-color;
             width: 150px;
             cursor: pointer;
+            transition: .3s all ease-in-out;
+            &:hover {
+              background-color: $primiry-color;
+              color: $light-bg-color;
+            }
           }
           input {
             font-size: 1.1em;
@@ -190,6 +195,11 @@
         margin: 0;
         padding: 0;
       }
+    }
+    button{
+      background: none;
+      border: 0;
+      cursor: pointer;
     }
     & :where(th, td) {
       padding: 2em 1em;
