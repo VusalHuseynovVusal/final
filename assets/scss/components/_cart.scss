@@ -3,14 +3,22 @@
 }
 .products.cart {
   .flexwrap {
+    position: relative;
     @include flex($wrap: wrap, $align: start);
     .form-cart {
+      
       @include tablet() {
+        position: sticky ;
+        top: 0;
+        overflow: auto;
+        max-height: 100vh;
         width: 60%;
       }
+
       width: 100%;
     }
     .cart-summary {
+      position: relative;
       width: 100%;
       // margin: 2.5em 0 4em;
       margin-left: auto;

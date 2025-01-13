@@ -47,7 +47,7 @@ function setTrendingProducts(){
             <div class="item">
                     <div class="media">
                       <div class="thumbnail">
-                        <a href="#">
+                        <a href="single-page.html">
                           <img src="${prod.img}" alt="">
                         </a>
                       </div>
@@ -94,20 +94,20 @@ function setFeaturedProducts(){
             <div class="item">
                   <div class="media">
                     <div class="thumbnail">
-                      <a href="#">
+                      <a href="single-page.html">
                         <img src="${prod.img}" alt="">
                       </a>
                     </div>
                     <div class="hoverable">
                       <ul>
                         <li class="active">
-                          <a href="#"><i class="ri-heart-line"></i></a>
+                          <button><i class="ri-heart-line"></i></button>
                         </li>
                         <li>
-                          <a href="#"><i class="ri-eye-line"></i></a>
+                          <button><i class="ri-eye-line"></i></button>
                         </li>
                         <li>
-                          <a href="#"><i class="ri-shuffle-line"></i></a>
+                          <button data-prodname="${prod.name}" class="add__cart__btn"><i class="ri-shopping-cart-line"></i></button>
                         </li>
                       </ul>
                     </div>
